@@ -1,0 +1,41 @@
+{% extends "base.html"%}
+
+{% block mainContent %}
+<table class="table">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>nickname</th>
+        <th>选项</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for user in users %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ user['nickname'] }}</td>
+        <td>
+            <a href="/detail/{{ user['id'] }}">查看代码提交历史</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
